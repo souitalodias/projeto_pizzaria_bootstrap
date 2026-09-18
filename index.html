@@ -1,19 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- MENU -->
+  <!-- navbar - barra de navegação do bootstrap
+    navbar-expand-lg - controla a responsividade. A partir de telas lg(large), o menu fica aberto/horizontal. Abaixo disso, pode ficar recolhido no botão sanduíche.
+    bg-danger - define a cor de fundo vermelho
+    navbar-dark - adapta os textos e ícones do navbar para serem utilizados sobre o fundo escuro
+    shadow -   
+     -->
+  <nav class="navbar navbar-expand-lg bg-danger navbar-dark shadow">
+    <div class="container">
+      <!-- navbar-brand - estiliza o elemento como a marca/logo da navbar 
+       fw-bold - deixa o texto em negrito. (fw - font-weight)
+       fs-4 - define o tamanho da fonte. (fs - font-size)-->
+      <a href="#" class="navbar-brand fw-bold fs-4"> Bella Pizza </a>
 
-<body>
+      <!--
+      navbar-toggler - botão responsável por abrir e fechar o menu em telas maiores.
+      data-bs-toggle="collapse" - informa que o botão irá mostrar/esconder um elemento.
+      data-bs-target - Indica qual elemento será aberto ou fechado. (Nesse caso procura o elemento com id="menu")
+      -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+      >
+        <!-- navbar-toggler-icon - exibe o botão sanduíche -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</body>
+      <div class="collapse navbar-collapse" id="menu">
+        <!--
+        navbar-nav - organiza a lista como menu de navegação
+        ms-auto -adiciona margem automaticamente no lado inicial (start)
+        Ou seja, empurra o item para a direita. (ms - margim start)
+        -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" href="#">
+            <a href="#" class="nav-link active"> Início </a>
+          </li>
+          <li class="nav-item" href="#">
+            <a href="#pizzas" class="nav-link"> Pizzas </a>
+          </li>
+          <li class="nav-item" href="#">
+            <a href="#sobre" class="nav-link"> Sobre </a>
+          </li>
+          <li class="nav-item" href="#">
+            <a href="#contato" class="nav-link"> Contato </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <body></body>
 </html>
