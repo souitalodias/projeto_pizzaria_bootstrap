@@ -16,58 +16,129 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <!-- MENU -->
-  <!-- navbar - barra de navegação do bootstrap
+  <body>
+    <!-- MENU -->
+    <!-- navbar - barra de navegação do bootstrap
     navbar-expand-lg - controla a responsividade. A partir de telas lg(large), o menu fica aberto/horizontal. Abaixo disso, pode ficar recolhido no botão sanduíche.
     bg-danger - define a cor de fundo vermelho
     navbar-dark - adapta os textos e ícones do navbar para serem utilizados sobre o fundo escuro
     shadow -   
      -->
-  <nav class="navbar navbar-expand-lg bg-danger navbar-dark shadow">
-    <div class="container">
-      <!-- navbar-brand - estiliza o elemento como a marca/logo da navbar 
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark shadow">
+      <div class="container">
+        <!-- navbar-brand - estiliza o elemento como a marca/logo da navbar 
        fw-bold - deixa o texto em negrito. (fw - font-weight)
        fs-4 - define o tamanho da fonte. (fs - font-size)-->
-      <a href="#" class="navbar-brand fw-bold fs-4"> Bella Pizza </a>
+        <a href="#" class="navbar-brand fw-bold fs-4"> Bella Pizza </a>
 
-      <!--
+        <!--
       navbar-toggler - botão responsável por abrir e fechar o menu em telas maiores.
       data-bs-toggle="collapse" - informa que o botão irá mostrar/esconder um elemento.
       data-bs-target - Indica qual elemento será aberto ou fechado. (Nesse caso procura o elemento com id="menu")
       -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu"
-      >
-        <!-- navbar-toggler-icon - exibe o botão sanduíche -->
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <!-- navbar-toggler-icon - exibe o botão sanduíche -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="menu">
-        <!--
+        <div class="collapse navbar-collapse" id="menu">
+          <!--
         navbar-nav - organiza a lista como menu de navegação
         ms-auto -adiciona margem automaticamente no lado inicial (start)
         Ou seja, empurra o item para a direita. (ms - margim start)
         -->
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item" href="#">
-            <a href="#" class="nav-link active"> Início </a>
-          </li>
-          <li class="nav-item" href="#">
-            <a href="#pizzas" class="nav-link"> Pizzas </a>
-          </li>
-          <li class="nav-item" href="#">
-            <a href="#sobre" class="nav-link"> Sobre </a>
-          </li>
-          <li class="nav-item" href="#">
-            <a href="#contato" class="nav-link"> Contato </a>
-          </li>
-        </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item" href="#">
+              <a href="#" class="nav-link active"> Início </a>
+            </li>
+            <li class="nav-item" href="#">
+              <a href="#pizzas" class="nav-link"> Pizzas </a>
+            </li>
+            <li class="nav-item" href="#">
+              <a href="#sobre" class="nav-link"> Sobre </a>
+            </li>
+            <li class="nav-item" href="#">
+              <a href="#contato" class="nav-link"> Contato </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <!--
+    DESTAQUE
+    bg-light = coloca um fundo claro
+    py-5 = adiciona espaçamento interno (padding) em cima e embaixo
+    p = padding
+    y = eixo vertical (top e bottom)
+    5 = tamanho do espaçamento
+    -->
+    <section class="bg-light py-5">
+      <!--
+      row = cria uma linha do sistema de grid do bootstrap
+      align-items-center = centraliza verticalmente os elementos que serão dentro da linha
+      -->
+      <div class="container">
+        <div class="row align-items-center">
+          <!--
+          col-md-6 = cria uma coluna que ocpa 6 das 12 partes do grid
+          a partir de telas médias (md)
 
-  <body></body>
+          como o grid possui 12 colunas:
+          6 + 6 = duas colunas 50% do espaço.
+
+          Em telas menores que md as colunas ficam uma abaixo da outra
+          -->
+          <div class="col-md-6">
+            <!--
+            display-4 = aplica um tamanho grande de destaque ao texto
+
+            fw-bold = deixa o texto em negrito
+            -->
+            <h1 class="display-4 fw-bold">
+              A melhor pizza da cidade!
+            </h1>
+
+            <!--
+            lead = deixa o parágrafo maior e com aparência de texto de destaque/apresentação
+            -->
+            <p class="lead">
+              Pizzas artesanais preparadas com ingredientes selecionados pelo próprio Ratatouillee muito sabor
+            </p>
+
+            <!--
+            btn = aplica a estilização padrão de botão do bootstrap
+            btn-danger = deixa o botão vermelho
+            btn-lg = cria um botão de tamanho grande
+            lg = large
+            -->
+            <a href="#pizzas" class="btn btn-danger btn-lg">
+              Ver Cardápio
+            </a>
+          </div>
+          <!--
+          col-md-6 = ocupa as outras 6 colunas do grid
+          text-center = centraliza o conteúdo/texto
+          m = margin
+          t = top
+          mt-md-0 = a partir de telas md, remove a margem superior
+          Isso é útil porque no celular a imagem ficará abaixo do texto e precisará de um espaço entre eles
+          -->
+          <div class="col-md-6 text-center mt-4 mt-md-0">
+            <!--
+            img-fluid = torna a imagem responsiva
+            a imagem diminui de acordo com o tamanho disponível
+            rounded = deixa os cantos da imagem arredondados
+            shadow = adiciona uma sombra
+            -->
+            <img src="./img/pizza.png" alt="pizza" class="img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
