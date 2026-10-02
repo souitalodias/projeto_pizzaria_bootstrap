@@ -99,15 +99,14 @@
 
             fw-bold = deixa o texto em negrito
             -->
-            <h1 class="display-4 fw-bold">
-              A melhor pizza da cidade!
-            </h1>
+            <h1 class="display-4 fw-bold">A melhor pizza da cidade!</h1>
 
             <!--
             lead = deixa o parágrafo maior e com aparência de texto de destaque/apresentação
             -->
             <p class="lead">
-              Pizzas artesanais preparadas com ingredientes selecionados pelo próprio Ratatouillee muito sabor
+              Pizzas artesanais preparadas com ingredientes selecionados pelo
+              próprio Ratatouillee muito sabor
             </p>
 
             <!--
@@ -116,9 +115,7 @@
             btn-lg = cria um botão de tamanho grande
             lg = large
             -->
-            <a href="#pizzas" class="btn btn-danger btn-lg">
-              Ver Cardápio
-            </a>
+            <a href="#pizzas" class="btn btn-danger btn-lg"> Ver Cardápio </a>
           </div>
           <!--
           col-md-6 = ocupa as outras 6 colunas do grid
@@ -135,7 +132,113 @@
             rounded = deixa os cantos da imagem arredondados
             shadow = adiciona uma sombra
             -->
-            <img src="./img/pizza.png" alt="pizza" class="img-fluid rounded shadow">
+            <img
+              src="./img/pizza.png"
+              alt="pizza"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pizzas" class="py-5">
+      <div class="container">
+        <!-- text-center - centraliza o texto.
+                 fw-bold - deixa o texto em negrito.
+                 mb-4 - adiciona margem inferior.
+                 m = margin 
+                 b = bottom
+                 4 = tamanho do espaçamento-->
+        <h2 class="text-center fw-bold mb-4">Nossas Pizzas</h2>
+        <!-- row - cria uma linha do Grid.
+                 g-4 - define um espaçamento entre as colunas e linhas.
+                 g significa gap/gutter. -->
+        <div class="row g-4">
+          <!-- Pizza 1-->
+          <!-- col-md-4 - ocupa 4 das 12 colunas do Grid.
+                     Como temos três elementos:
+                     4 + 4 + 4 = 12 
+                     Portanto, sem telas md ou maiores termos
+                     três cards lado a lado.
+                     Em telas menores, eles ficarão um abaixo do outro. -->
+          <div class="col-md-4">
+            <!-- card - cria um card do Bootstrap.
+                        h-100 - faz o card ocupar 100% da altura disponível. 
+                        Ajuda a deixar todos os cards com a mesma altura.
+                        
+                        show-sw - adiciona uma sombra pequena sm significa small. -->
+            <div class="card h-100 shadow-sm">
+              <!--card-img-top-->
+              <img src="img/pizza2.webp" alt="pizza" class="--card-img-top">
+
+              <!--
+              card-body = cria a área principal do conteúdo do card, aplicando espaçamentos automaticamente
+              -->
+              <div class="card-body">
+                <!--
+                card-title = estiiza o título do card
+                -->
+                <h5 class="card-title">Calabresa</h5>
+                <!--
+                card-text = estiliza o texto do conteúdo do card
+                -->
+                <p class="card-text">
+                  Molho de tomate, mussarela, calabresa, cebola e orégano.
+                </p>
+
+                <p class="fw-bold text-danger fs-5">
+                  R$45,00
+                </p>
+
+                <!--
+                btn = transforma o link visualmente em botão
+                btn-danger = aplica a cor vermelha ao botão
+                -->
+                <a href="#" class="btn btn-danger">
+                  Pedir agora
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--Pizza 2-->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/pizza2.webp" alt="pizza" class="card-img-top">
+
+              <div class="card-body">
+                <h5 class="card-title">Marguerita</h5>
+                <p class="card-text">
+                  Molho de tomate, mussarela, tomate, manjericão e orégano.
+                </p>
+                <p class="fw-bold text-danger fs-5">
+                  R$42,00
+                </p>
+                <a href="#" class="btn btn-danger">
+                  Pedir agora
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--Pizza 3-->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/pizza2.webp" alt="pizza" class="card-img-top">
+
+              <div class="card-body">
+                <h5 class="card-title">Frango com catupiry</h5>
+                <p class="card-text">
+                  Molho de tomate, mussarela, frango desfiado e catupiry.
+                </p>
+                <p class="fw-bold text-danger fs-5">
+                  R$48,00
+                </p>
+                <a href="#" class="btn btn-danger">
+                  Pedir agora
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
